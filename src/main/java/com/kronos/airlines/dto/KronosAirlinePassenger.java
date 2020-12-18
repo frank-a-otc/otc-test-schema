@@ -10,6 +10,7 @@ package com.kronos.airlines.dto;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -100,10 +101,18 @@ import javax.xml.bind.annotation.XmlType;
     "preference",
     "dataLists",
     "travelers",
-    "given",
+    "aliases",
     "ptc",
     "mainPassengerName",
-    "travelerDetailType"
+    "travelerDetailType",
+    "recognizedTravelerMap",
+    "customObjectsMap",
+    "customStringMap",
+    "integerIntegerMap",
+    "integerStringMap",
+    "stringIntegerMap",
+    "enumsMap",
+    "given"
 })
 @XmlRootElement(name = "KronosAirlinePassenger")
 public class KronosAirlinePassenger {
@@ -124,6 +133,26 @@ public class KronosAirlinePassenger {
     protected String mainPassengerName;
     @XmlElement(name = "TravelerDetailType")
     protected TravelerDetailType travelerDetailType;
+
+    @XmlElement(name = "RecognizedTravelerMap")
+    protected Map<String, TravelerDetailType> recognizedTravelerMap;
+
+    @XmlElement(name = "CustomObjectsMap")
+    protected Map<AnonymousTravelerType, TravelerDetailType> customObjectsMap;
+
+    @XmlElement(name = "CustomStringMap")
+    protected Map<TravelerDetailType, String> customStringMap;
+	@XmlElement(name = "IntegerIntegerMap")
+    protected Map<Integer, Integer> integerIntegerMap;
+    @XmlElement(name = "IntegerStringMap")
+    protected Map<Integer, String> integerStringMap;
+    @XmlElement(name = "StringIntegerMap")
+    protected Map<String, Integer> stringIntegerMap;
+    @XmlElement(name = "EnumsMap")
+    protected Map<TravelerGenderSimpleType, TravelerGenderSimpleType> enumsMap;
+    @XmlElement(name = "Aliases")
+    protected List<String> aliases;
+
 
     /**
      * Gets the value of the coreQuery property.
@@ -274,7 +303,63 @@ public class KronosAirlinePassenger {
 		this.travelerDetailType = travelerDetailType;
 	}
 
-    /**
+	public Map<String, TravelerDetailType> getRecognizedTravelerMap() {
+		return recognizedTravelerMap;
+	}
+
+	public void setRecognizedTravelerMap(Map<String, TravelerDetailType> recognizedTravelerMap) {
+		this.recognizedTravelerMap = recognizedTravelerMap;
+	}
+
+	public Map<AnonymousTravelerType, TravelerDetailType> getCustomObjectsMap() {
+		return customObjectsMap;
+	}
+
+	public void setCustomObjectsMap(Map<AnonymousTravelerType, TravelerDetailType> customObjectsMap) {
+		this.customObjectsMap = customObjectsMap;
+	}
+
+	public Map<TravelerDetailType, String> getCustomStringMap() {
+		return customStringMap;
+	}
+
+	public void setCustomStringMap(Map<TravelerDetailType, String> customStringMap) {
+		this.customStringMap = customStringMap;
+	}
+
+	public Map<Integer, Integer> getIntegerIntegerMap() {
+		return integerIntegerMap;
+	}
+
+	public void setIntegerIntegerMap(Map<Integer, Integer> integerIntegerMap) {
+		this.integerIntegerMap = integerIntegerMap;
+	}
+
+	public Map<Integer, String> getIntegerStringMap() {
+		return integerStringMap;
+	}
+
+	public void setIntegerStringMap(Map<Integer, String> integerStringMap) {
+		this.integerStringMap = integerStringMap;
+	}
+
+	public Map<String, Integer> getStringIntegerMap() {
+		return stringIntegerMap;
+	}
+
+	public void setStringIntegerMap(Map<String, Integer> stringIntegerMap) {
+		this.stringIntegerMap = stringIntegerMap;
+	}
+
+	public Map<TravelerGenderSimpleType, TravelerGenderSimpleType> getEnumsMap() {
+		return enumsMap;
+	}
+
+	public void setEnumsMap(Map<TravelerGenderSimpleType, TravelerGenderSimpleType> enumsMap) {
+		this.enumsMap = enumsMap;
+	}
+
+	/**
      * <p>Java class for anonymous complex type.
      * 
      * <p>The following schema fragment specifies the expected content contained within this class.

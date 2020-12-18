@@ -125,8 +125,8 @@ public class AthenaAirlinePassenger {
     protected AthenaAirlinePassenger.DataLists dataLists;
     @XmlElement(name = "Travelers", required = true)
     protected Travelers travelers;
-    @XmlElement(name = "Aliases")
-    protected List<String> aliases;
+    @XmlElement(name = "Given")
+    protected List<String> given;
     @XmlElement(name = "PTC")
     protected TravelerCoreType.PTC[] ptc;
     @XmlElement(name = "MainPassengerName")
@@ -150,8 +150,8 @@ public class AthenaAirlinePassenger {
     protected Map<String, Integer> stringIntegerMap;
     @XmlElement(name = "EnumsMap")
     protected Map<TravelerGenderSimpleType, TravelerGenderSimpleType> enumsMap;
-    @XmlElement(name = "Given")
-    protected List<String> given;
+    @XmlElement(name = "Aliases")
+    protected List<String> aliases;
 
     /**
      * Gets the value of the coreQuery property.
