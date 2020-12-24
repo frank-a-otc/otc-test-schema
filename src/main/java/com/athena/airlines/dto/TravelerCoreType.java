@@ -113,9 +113,7 @@ public class TravelerCoreType {
     @XmlElement(name = "ResidenceCode")
     protected String residenceCode;
     @XmlElement(name = "PassengerAssociation")
-    @XmlIDREF
-    @XmlSchemaType(name = "IDREF")
-    protected Object passengerAssociation;
+    protected String passengerAssociation;
     @XmlElement(name = "Age")
     protected TravelerCoreType.Age age;
     @XmlElement(name = "CitizenshipCountryCode")
@@ -179,7 +177,7 @@ public class TravelerCoreType {
      *     {@link Object }
      *     
      */
-    public Object getPassengerAssociation() {
+    public String getPassengerAssociation() {
         return passengerAssociation;
     }
 
@@ -191,7 +189,7 @@ public class TravelerCoreType {
      *     {@link Object }
      *     
      */
-    public void setPassengerAssociation(Object value) {
+    public void setPassengerAssociation(String value) {
         this.passengerAssociation = value;
     }
 

@@ -63,7 +63,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "profileID",
     "identityDocuments",
     "language",
-    "identityDocument"
+    "identityDocument",
+    "givenName"
 })
 public class PassengerType {
 
@@ -94,6 +95,8 @@ public class PassengerType {
     protected String passengerID;
     @XmlElement(name = "IdentityDocument")
     protected IdentityDocumentType identityDocument;
+    @XmlElement(name = "GivenName")
+    protected List<String> givenName;
 
     /**
      * Gets the value of the ptc property.
@@ -305,7 +308,15 @@ public class PassengerType {
 	}
 
 
-    /**
+    public List<String> getGivenName() {
+		return givenName;
+	}
+
+	public void setGivenName(List<String> givenName) {
+		this.givenName = givenName;
+	}
+
+	/**
      * Gets the value of the language property.
      * 
      * <p>
