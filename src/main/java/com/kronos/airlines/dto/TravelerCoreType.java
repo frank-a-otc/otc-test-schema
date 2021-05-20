@@ -120,8 +120,8 @@ public class TravelerCoreType {
     protected TravelerCoreType.Age age;
     @XmlElement(name = "CitizenshipCountryCode")
     protected String citizenshipCountryCode;
-//    @XmlElement(name = "Name1", required = true)
-//    protected TravelerCoreType.Name name1;
+    @XmlElement(name = "Name1", required = true)
+    protected TravelerCoreType.Name name1;
 
     /**
      * Gets the value of the ptc property.
@@ -242,6 +242,22 @@ public class TravelerCoreType {
     public void setCitizenshipCountryCode(String value) {
         this.citizenshipCountryCode = value;
     }
+
+	public TravelerCoreType.PTC getPtc() {
+		return ptc;
+	}
+
+	public void setPtc(TravelerCoreType.PTC ptc) {
+		this.ptc = ptc;
+	}
+
+	public TravelerCoreType.Name getName1() {
+		return name1;
+	}
+
+	public void setName1(TravelerCoreType.Name name1) {
+		this.name1 = name1;
+	}
 
 	/**
      * <p>Java class for anonymous complex type.

@@ -78,10 +78,11 @@ public class AirShopReqAttributeQueryType {
      * 
      * 
      */
+
     public List<AirShopReqAttributeQueryType.OriginDestination> getOriginDestination() {
-        if (originDestination == null) {
-            originDestination = new ArrayList<AirShopReqAttributeQueryType.OriginDestination>();
-        }
+//        if (originDestination == null) {
+//            originDestination = new ArrayList<AirShopReqAttributeQueryType.OriginDestination>();
+//        }
         return this.originDestination;
     }
 
