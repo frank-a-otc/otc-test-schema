@@ -1,11 +1,10 @@
-package otcl.test.converter;
+package otc.test.converter;
 
 import java.util.Map;
 
-import org.otcl2.common.converter.OtclConverter;
+import org.otcframework.common.converter.OtcConverter;
 
-
-public class TestConverter implements OtclConverter {
+public class TestConverter implements OtcConverter {
 
 	@Override
 	public <S, T> T convert(S sourceObject, T targetObject, Map<String, Object> data) {

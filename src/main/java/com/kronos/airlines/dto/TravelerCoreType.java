@@ -99,8 +99,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "residenceCode",
     "passengerAssociation",
     "age",
-    "citizenshipCountryCode"
-//    "name1"
+    "citizenshipCountryCode",
+    "name1"
 })
 @XmlSeeAlso({
     TravelerSummaryType.class,
