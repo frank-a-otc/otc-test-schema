@@ -14,6 +14,8 @@ import com.kronos.airlines.dto.KronosAirlinePassenger;
 
 public class TestFactoryHelper {
 
+	private static final String err = "But helper method is not complete ! Pls fix it.";
+	
 	public static void setMainPassenger(AthenaAirlinePassenger athenaAirlinePassenger, String mainPassengerName) {
 		athenaAirlinePassenger.setMainPassengerName(mainPassengerName); 
 	}
@@ -30,6 +32,8 @@ public class TestFactoryHelper {
 			com.athena.airlines.dto.TravelerDetailType.Gender gender) {
 		System.out.println("Called method - writeValue(com.athena.airlines.dto.TravelerDetailType travelerDetailType, "
 				+ "com.athena.airlines.dto.TravelerDetailType.Gender gender)");
+		System.out.println(err);
+		throw new RuntimeException(err);
 	}
 	
 	public static TravelerCoreType.PTC getPtc(TravelerDetailType travelerDetailType) {
@@ -50,26 +54,37 @@ public class TestFactoryHelper {
 
 	public static void setValue(AnonymousTravelerType anonymousTravelerType, TravelerDetailType.Gender gender) {
 		System.out.println("Called method - setValue(AnonymousTravelerType, TravelerDetailType.Gender)");
+		System.out.println(err);
+		throw new RuntimeException(err);
 	}
 	
 	public static void setGenderValue(TravelerGenderSimpleType travelerGenderSimpleType, String value) {
 		System.out.println("Called method - setGenderValue(TravelerGenderSimpleType, String)");
+		System.out.println(err);
+		throw new RuntimeException(err);
 	}
 	
 	public static void setGender(com.athena.airlines.dto.IdentityDocumentType identityDocumentType, com.athena.airlines.dto.TravelerDetailType.Gender gender) {
 		System.out.println("Called method - setGender(com.athena.airlines.dto.IdentityDocumentType, com.athena.airlines.dto.TravelerDetailType.Gender)");
+		System.out.println(err);
+		throw new RuntimeException(err);
 	}
 	
 	public static void setGenderEnum(TravelerDetailType.Gender gender, com.athena.airlines.dto.TravelerGenderSimpleType travelerGenderSimpleType) {
 		System.out.println("Called method - setGenderEnum(TravelerDetailType.Gender, com.athena.airlines.dto.TravelerGenderSimpleType)");
+		System.out.println(err);
+		throw new RuntimeException(err);
 	}
 
 	public static void setGenderEnum(TravelerDetailType.Gender gender, String value) {
+		gender.setValue(TravelerGenderSimpleType.valueOf(value));
 		System.out.println("Called method - setGenderEnum(TravelerDetailType.Gender, String)");
 	}
 
 	public static void setGenderEnum(TravelerDetailType.Gender gender, com.kronos.airlines.dto.TravelerGenderSimpleType travelerGenderSimpleType) {
 		System.out.println("Called method - setGenderEnum(TravelerDetailType.Gender, com.kronos.airlines.dto.TravelerGenderSimpleType)");
+		System.out.println(err);
+		throw new RuntimeException(err);
 	}
 
 	// --- setting value using reflection API when a setter is missing.
