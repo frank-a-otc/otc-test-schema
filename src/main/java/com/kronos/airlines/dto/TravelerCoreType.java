@@ -243,13 +243,13 @@ public class TravelerCoreType {
         this.citizenshipCountryCode = value;
     }
 
-	public TravelerCoreType.PTC getPtc() {
-		return ptc;
-	}
-
-	public void setPtc(TravelerCoreType.PTC ptc) {
-		this.ptc = ptc;
-	}
+//	public TravelerCoreType.PTC getPtc() {
+//		return ptc;
+//	}
+//
+//	public void setPtc(TravelerCoreType.PTC ptc) {
+//		this.ptc = ptc;
+//	}
 
 	public TravelerCoreType.Name getName1() {
 		return name1;
