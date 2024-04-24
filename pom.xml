@@ -14,11 +14,35 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 		<jaxb.version>2.3.1</jaxb.version>
-		
+		<jaxb-runtime.version>2.3.2</jaxb-runtime.version>
 		<javax.activation.version>1.1.1</javax.activation.version>
 		
 		<otc.version>2.7.1-SNAPSHOT</otc.version>
 	</properties>
+
+
+	<profiles>
+		<profile>
+			<id>jdk>=9</id>
+			<activation>
+				<jdk>[9,]</jdk>
+			</activation>
+			<dependencies>
+				<!-- API, java.xml.bind module -->
+				<dependency>
+					<groupId>jakarta.xml.bind</groupId>
+					<artifactId>jakarta.xml.bind-api</artifactId>
+					<version>${jaxb-runtime.version}</version>
+				</dependency>
+				<!-- Runtime, com.sun.xml.bind module -->
+				<dependency>
+					<groupId>org.glassfish.jaxb</groupId>
+					<artifactId>jaxb-runtime</artifactId>
+					<version>${jaxb-runtime.version}</version>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
 
 	<dependencies>
 		<dependency>
